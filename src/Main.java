@@ -11,7 +11,10 @@ public class Main {
         Student s3 = service.create();
         Student[] students = {s1, s2, s3};
         service.smallFemale(students);
+        System.out.println("---------------");
         service.byAgeOrder(students);
+        System.out.println("---------------");
+        service.secondMin(students).printInfo();
 
 //        s1.printInfo();
 //        System.out.println("---------------");
