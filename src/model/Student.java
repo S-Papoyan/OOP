@@ -15,6 +15,10 @@ public class Student {
         this.isPhd = isPhd;
     }
 
+    public Student() {
+
+    }
+
     public String getName() {
         return name;
     }
@@ -51,6 +55,6 @@ public class Student {
         System.out.println("Name: " + name);
         System.out.println("Year: " + year);
         System.out.println("Gender: " + (gender == 'f' ? "female" : "male"));
-        System.out.println("Is PHD: " + (isPhd == true? "Yes" : "N"));
+        System.out.println("Is PHD: " + (isPhd ? "Yes" : "N"));
     }
 }
