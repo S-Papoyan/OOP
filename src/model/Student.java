@@ -1,16 +1,16 @@
 package model;
-
 public class Student {
 
     private String name;
     private int year;
+    private double mark;
     private char gender;
     private boolean isPhd;
 
-
-    public Student(String name, int year, char gender, boolean isPhd) {
+    public Student(String name, int year, double mark, char gender, boolean isPhd) {
         this.name = name;
         this.year = year;
+        this.mark = mark;
         this.gender = gender;
         this.isPhd = isPhd;
     }
@@ -35,6 +35,14 @@ public class Student {
         this.year = year;
     }
 
+    public double getMark() {
+        return mark;
+    }
+
+    public void setMark(double mark) {
+        this.mark = mark;
+    }
+
     public char getGender() {
         return gender;
     }
@@ -54,6 +62,7 @@ public class Student {
     public void printInfo() {
         System.out.println("Name: " + name);
         System.out.println("Year: " + year);
+        System.out.println("Mark: " + mark);
         System.out.println("Gender: " + (gender == 'f' ? "female" : "male"));
         System.out.println("Is PHD: " + (isPhd ? "Yes" : "N"));
     }

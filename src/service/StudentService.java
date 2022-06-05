@@ -2,7 +2,6 @@ package service;
 
 import model.Student;
 
-import java.lang.reflect.AnnotatedElement;
 import java.util.Scanner;
 
 public class StudentService {
@@ -13,11 +12,13 @@ public class StudentService {
         String name = c.next();
         System.out.println("Enter year: ");
         int year = c.nextInt();
+        System.out.println("Enter mark: ");
+        double mark = c.nextDouble();
         System.out.println("Enter gender: 'f' (female) or 'm' (male): ");
         char gender = c.next().charAt(0);
         System.out.println("Enter is PHF true/false?");
         boolean isPhd = c.nextBoolean();
-        return new Student(name, year, gender, isPhd);
+        return new Student(name, year, mark, gender, isPhd);
     }
 
     public void oldestStudent(Student s1, Student s2) {
@@ -46,11 +47,6 @@ public class StudentService {
         }
     }
 
-    /*
-        Տպել տարքիով ամենափոքր աղջիկ ուսանողի անունը։
-        Չի ստացվում տպել տվյալ աղջիկ ուսանողի printInfo() մեթոդը։
-        Չի ստացվում տպել տվյալ աղջիկ ուսանողի printInfo() մեթոդը, եթե տրված array-ի մեջ 2-ը աղջիկ են, 1-ը տղա։
-    */
     public void smallFemale(Student[] students) {
         Student min = null;
         for (Student student : students) {
@@ -76,7 +72,7 @@ public class StudentService {
     /*
         Student օբյեկտների array-ի մեջ դասավորել օբյեկտների տարիքները ըստ աճման կարգի և տպել անունները։
      */
-    public void byAgeOrder(Student[] students) {
+    public void sortOfAge(Student[] students) {
         for (int i = 0; i < students.length; i++) {
             for (int j = i + 1; j < students.length; j++) {
                 if (students[i].getYear() < students[j].getYear()) {
@@ -100,7 +96,34 @@ public class StudentService {
         }
         return min;
     }
+
+    public void oldStudent(Student[] students) {
+        Student oldStudent = null;
+        for (Student student : students) {
+            if (oldStudent == null) {
+                oldStudent = student;
+            } else if (student.getYear() < oldStudent.getYear()) {
+                oldStudent = student;
+            }
+        }
+        oldStudent.printInfo();
+    }
+
+    public void smallMark(Student[] students) {
+
+        Student smallMark = null;
+        for (Student student : students) {
+            if (smallMark == null) {
+                smallMark = student;
+            } else if (student.getMark() < smallMark.getMark()) {
+                smallMark = student;
+            }
+        }
+            smallMark.printInfo();
+    }
 }
+
+
 
 
 
