@@ -110,7 +110,6 @@ public class StudentService {
     }
 
     public void smallMark(Student[] students) {
-
         Student smallMark = null;
         for (Student student : students) {
             if (smallMark == null) {
@@ -119,7 +118,22 @@ public class StudentService {
                 smallMark = student;
             }
         }
-            smallMark.printInfo();
+        smallMark.printInfo();
+    }
+
+    public void sortOfMark(Student[] students) {
+        for (int i = 0; i < students.length; i++) {
+            for (int j = i + 1; j < students.length; j++) {
+                if (students[i].getMark() > students[j].getMark()) {
+                    Student temp = students[j];
+                    students[j] = students[i];
+                    students[i] = temp;
+                }
+            }
+        }
+        for (Student student : students) {
+            System.out.println(student.getName() + ": " + student.getMark());
+        }
     }
 }
 

@@ -19,16 +19,12 @@ public class Main {
         System.out.println("---------------");
         service.secondMin(students).printInfo();
         System.out.println("---------------");
-        s1.printInfo();
-        System.out.println("---------------");
-        s2.printInfo();
-        System.out.println("---------------");
-        s3.printInfo();
-        System.out.println("---------------");
         service.femaleStudents(students);
         System.out.println("---------------");
         service.isPhdStudents(students);
         System.out.println("---------------");
         service.smallMark(students);
+        System.out.println("---------------");
+        service.sortOfMark(students);
     }
 }
