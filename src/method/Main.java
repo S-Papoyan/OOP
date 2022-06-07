@@ -1,5 +1,7 @@
-import model.Student;
-import service.StudentService;
+package method;
+
+import method.model.Student;
+import method.service.StudentService;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,6 @@
-package service;
+package method.service;
 
-import model.Student;
+import method.model.Student;
 
 import java.util.Scanner;
 
@@ -135,10 +135,9 @@ public class StudentService {
             System.out.println(student.getName() + ": " + student.getMark());
         }
     }
+
+
+
+    
+
 }
-
-
-
-
-
-
