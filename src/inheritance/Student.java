@@ -27,5 +27,6 @@ public class Student extends Human{
         super.printInfo();
         System.out.println("Faculty: " + faculty);
         System.out.println("Student ID: " + studentId);
+
     }
 }
