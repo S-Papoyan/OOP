@@ -3,9 +3,10 @@ import method.Main;
 public class Test {
     public static void main(String[] args) {
         Test t = new Test();
-        t.factorial(5);
+        t.f(4);
 
     }
+
 
     public void f(int x) {
         System.out.println("Barev");
@@ -25,16 +26,6 @@ public class Test {
             return 1;
         return x * fact(x - 1);
     }
-
-    public void factorial(int x){
-        int a = 1;
-        for (int i = 1; i <= x ; i++) {
-            a = a * i;
-        }
-        System.out.println(a);
-    }
-
-
 
 }
 
